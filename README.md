@@ -15,7 +15,7 @@ BEGIN USER SETTINGS / END USER SETTINGS comments.
 
 Available test cases
 --------------------
-Three simple test cases are contained in separate directories under "data". 
+A simple test case is contained in separate directories under "data". 
 Set the "name_dir" variable in "FFT_VI.m"  to the appropriate directory.
 
 User-defined test cases
