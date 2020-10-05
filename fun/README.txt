@@ -21,6 +21,11 @@ Contains the copy of VoxHenry_functions toolbox and modified functions
 The original one is available at 
 https://it.mathworks.com/matlabcentral/fileexchange/29702-generate-maximally-perceptually-distinct-colors
 
+MyCopyOf_find graph conected components
+Contains the copy of find graph conected components toolbox 
+The original one is available at 
+https://it.mathworks.com/matlabcentral/fileexchange/33877-find-graph-conected-components
+
 myfun
 Contains functions written by Riccardo Torchio
 
