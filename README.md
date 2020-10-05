@@ -1,3 +1,7 @@
+<p align="center">
+	<img src="image.pdf" width="486.4">
+</p>
+
 # FFT-VI 
 
 This directory contains a FFT-VI code for electromagnetic problems
