@@ -17,7 +17,7 @@ plot_vectorsJ_flag = 1; %quiver plot of real and imag of J
 plot_potential_flag = 1; %color plot of phi real and imag
 paraview_export_flag = 1; % export to paraviw
 refine.flag = 0; refine.x=1; refine.y=1; refine.z=1; % refine
-Integration_flag = 'NumAn'; %'NumAn'; 'NumNum' (Integration: NumericalNumerical or AnalyticalNumerical)
+Integration_flag = 'NumNum'; %'NumAn'; 'NumNum' (Integration: NumericalNumerical or AnalyticalNumerical)
 ext_field_flag = 1; % exernal field
 % below you can write the external electric field as a function of x,y,z
 % and omega. Active only if ext_field_flag=1
