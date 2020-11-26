@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="image.tiff" width="600">
+	<img src="image.png" width="600">
 </p>
 
 # FFT-VI 
