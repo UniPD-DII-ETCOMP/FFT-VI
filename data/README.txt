@@ -12,7 +12,7 @@ How to create a new user-defined test-case:
     %
     stl_files(1).name = 'test.stl'; % name of the first stl file to load
     stl_files(1).tag = 'cond';          % tag for the material (write 'cond' for condutive media)
-    stl_files(1).rho=1/57e6;            % conductivity of the medium
+    stl_files(1).rho=1/57e6;            % resitivity of the medium
     % Box 
     % number of voxels in the x y z directions
     Nx=100; number of voxels in the x direction
