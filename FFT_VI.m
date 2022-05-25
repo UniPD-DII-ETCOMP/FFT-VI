@@ -9,7 +9,7 @@ warning on
 %% BEGIN USER SETTINGS
 %%
 %% Directory
-name_dir='test1';
+name_dir='test2';
 %% Frequency
 freq = 50; %[Hz]
 %% Selections
@@ -17,11 +17,12 @@ plot_vectorsJ_flag = 1; %quiver plot of real and imag of J
 plot_potential_flag = 1; %color plot of phi real and imag
 paraview_export_flag = 1; % export to paraviw
 refine.flag = 0; refine.x=1; refine.y=1; refine.z=1; % refine
-Integration_flag = 'NumNum'; %'NumAn'; 'NumNum' (Integration: NumericalNumerical or AnalyticalNumerical)
+Integration_flag = 'NumAn'; %'NumAn'; 'NumNum' (Integration: NumericalNumerical or AnalyticalNumerical)
 ext_field_flag = 1; % exernal field
 % below you can write the external electric field as a function of x,y,z
 % and omega. Active only if ext_field_flag=1
-Ex_ext = @(x,y,z,omega) -1j*0.5*omega*y; Ey_ext = @(x,y,z,omega) 1j*0.5*omega*x; Ez_ext = @(x,y,z,omega) 0*z; % external field 
+scal=0.991/sqrt(2);
+Ex_ext = @(x,y,z,omega) -scal*1j*0.5*omega*y; Ey_ext = @(x,y,z,omega) scal*1j*0.5*omega*x; Ez_ext = @(x,y,z,omega) 0*z; % external field, this electric field gives a vertical magnetic field of magnitude "scal"  
 %% Solver parameters
 tol = 1e-6;
 inner_it = 40;
@@ -276,4 +277,10 @@ warning off
     fun_for_ParaView_vec_HEXA(...
     jjR(idxV,:),jjI(idxV,:),P0,VP,dad,[modelname,'J']);
 warning on
+end
+%%
+Plosses=real(vsol(1:num_curr)'*([z_realx_loc*dx/(dy*dz);z_realy_loc*dy/(dx*dz);z_realz_loc*dz/(dy*dx)].*vsol(1:num_curr))) % losses
+if strcmp(name_dir,'test2') && freq==50 
+    Plosses_reference_value=226.97
+    disp('Analytical results given in:  https://doi.org/10.1103/PhysRevSTAB.14.062401 ')
 end
